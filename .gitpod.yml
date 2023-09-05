@@ -2,13 +2,23 @@ image: gitpod/workspace-full
 
 #tasks:
 #  - init: ./mvnw clean install -U -DskipTests
-#    command: ./mvnw spring-boot:run
+#    command: ./mvnw spring-boot:run2
+
 #    name: Run PetClinic app
 
 ports:
   - port: 8080
     onOpen: open-preview
-
+    visibility: public
+  - port: 3306
+    onOpen: open-preview
+    visibility: public
+  - port: 8000
+    onOpen: open-preview
+    visibility: public
+  - port: 3000
+    onOpen: open-preview
+    visibility: public
 vscode:
   extensions:
     - pivotal.vscode-spring-boot
@@ -18,4 +28,5 @@ jetbrains:
   intellij:
     plugins:
       - com.haulmont.jpab
+
 
